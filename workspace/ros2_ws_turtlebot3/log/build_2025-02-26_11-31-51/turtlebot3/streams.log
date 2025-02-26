@@ -1,0 +1,71 @@
+[0.008s] Invoking command in '/ros2_ws/build/turtlebot3': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/turtlebot3 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/turtlebot3
+[0.071s] -- The C compiler identification is GNU 11.4.0
+[0.112s] -- The CXX compiler identification is GNU 11.4.0
+[0.117s] -- Detecting C compiler ABI info
+[0.163s] -- Detecting C compiler ABI info - done
+[0.167s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.168s] -- Detecting C compile features
+[0.168s] -- Detecting C compile features - done
+[0.170s] -- Detecting CXX compiler ABI info
+[0.225s] -- Detecting CXX compiler ABI info - done
+[0.230s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.230s] -- Detecting CXX compile features
+[0.230s] -- Detecting CXX compile features - done
+[0.233s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.338s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.416s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.481s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.482s] -- Added test 'lint_cmake' to check CMake code style
+[0.483s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.486s] -- Added test 'xmllint' to check XML markup files
+[0.487s] -- Configuring done
+[0.489s] -- Generating done
+[0.489s] -- Build files have been written to: /ros2_ws/build/turtlebot3
+[0.492s] Invoked command in '/ros2_ws/build/turtlebot3' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/turtlebot3 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/turtlebot3
+[0.494s] Invoking command in '/ros2_ws/build/turtlebot3': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/turtlebot3 -- -j8 -l8
+[0.518s] Invoked command in '/ros2_ws/build/turtlebot3' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/turtlebot3 -- -j8 -l8
+[0.535s] Invoking command in '/ros2_ws/build/turtlebot3': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/turtlebot3
+[0.539s] -- Install configuration: ""
+[0.539s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/launch
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/launch/robot_state_publisher.launch.py
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/launch/ros_ign_bridge.launch.py
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/launch/navigation2.launch.py
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/launch/simulation.launch.py
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/turtlebot3
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/turtlebot3/model.sdf
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/turtlebot3/meshes
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/turtlebot3/meshes/lds.dae
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/turtlebot3/meshes/tire.dae
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/turtlebot3/meshes/burger_base.dae
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/turtlebot3/meshes/waffle_pi_base.dae
+[0.540s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/turtlebot3/meshes/waffle_base.dae
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/turtlebot3/meshes/r200.dae
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/turtlebot3/model.config
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/worlds
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/worlds/model.sdf
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/worlds/meshes
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/worlds/meshes/hexagon.dae
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/worlds/meshes/wall.dae
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/models/worlds/world_only.sdf
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/maps
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/maps/turtlebot3_world.pgm
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/maps/turtlebot3_world.yaml
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/params
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/params/waffle.yaml
+[0.541s] -- Installing: /ros2_ws/install/turtlebot3/share/ament_index/resource_index/package_run_dependencies/turtlebot3
+[0.542s] -- Installing: /ros2_ws/install/turtlebot3/share/ament_index/resource_index/parent_prefix_path/turtlebot3
+[0.542s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/environment/ament_prefix_path.sh
+[0.542s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/environment/ament_prefix_path.dsv
+[0.542s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/environment/path.sh
+[0.542s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/environment/path.dsv
+[0.542s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/local_setup.bash
+[0.542s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/local_setup.sh
+[0.542s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/local_setup.zsh
+[0.543s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/local_setup.dsv
+[0.543s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/package.dsv
+[0.543s] -- Installing: /ros2_ws/install/turtlebot3/share/ament_index/resource_index/packages/turtlebot3
+[0.543s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/cmake/turtlebot3Config.cmake
+[0.543s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/cmake/turtlebot3Config-version.cmake
+[0.543s] -- Installing: /ros2_ws/install/turtlebot3/share/turtlebot3/package.xml
+[0.555s] Invoked command in '/ros2_ws/build/turtlebot3' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/turtlebot3

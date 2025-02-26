@@ -1,0 +1,16 @@
+/ros2_ws/install/launch/share/launch//launch/launch.py
+/ros2_ws/install/launch/share/ament_index/resource_index/package_run_dependencies/launch
+/ros2_ws/install/launch/share/ament_index/resource_index/parent_prefix_path/launch
+/ros2_ws/install/launch/share/launch/environment/ament_prefix_path.sh
+/ros2_ws/install/launch/share/launch/environment/ament_prefix_path.dsv
+/ros2_ws/install/launch/share/launch/environment/path.sh
+/ros2_ws/install/launch/share/launch/environment/path.dsv
+/ros2_ws/install/launch/share/launch/local_setup.bash
+/ros2_ws/install/launch/share/launch/local_setup.sh
+/ros2_ws/install/launch/share/launch/local_setup.zsh
+/ros2_ws/install/launch/share/launch/local_setup.dsv
+/ros2_ws/install/launch/share/launch/package.dsv
+/ros2_ws/install/launch/share/ament_index/resource_index/packages/launch
+/ros2_ws/install/launch/share/launch/cmake/launchConfig.cmake
+/ros2_ws/install/launch/share/launch/cmake/launchConfig-version.cmake
+/ros2_ws/install/launch/share/launch/package.xml

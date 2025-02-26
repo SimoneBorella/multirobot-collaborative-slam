@@ -27,7 +27,8 @@ RUN apt -y update \
 
 # Navigation2
 RUN apt -y update \
-    && apt install -y ros-humble-navigation2 ros-humble-nav2-bringup
+    && apt install -y ros-humble-navigation2 ros-humble-nav2-bringup \
+    && apt install -y ros-humble-ros-ign-bridge
     # && apt install -y ros-humble-rmw-cyclonedds-cpp
 
 # Cpp tools and libraries
@@ -47,10 +48,13 @@ RUN mkdir build \
     && make install \
     && ldconfig
 
-COPY gtsam_examples /gtsam_examples
-COPY ros2_ws /ros2_ws
+COPY workspace /workspace
 
 # Configuration .bashrc
+
+RUN echo "# Set default XDG_RUNTIME_DIR" >> /root/.bashrc \
+    && echo "export XDG_RUNTIME_DIR=/tmp/runtime-root" >> /root/.bashrc
+
 RUN echo "# Avoid graphic issues using DRI2 instead of DRI3 with Intel Iris" >> /root/.bashrc \
     && echo "export LIBGL_DRI3_DISABLE=1" >> /root/.bashrc
 
@@ -60,13 +64,23 @@ RUN echo "# Avoid graphic issues using DRI2 instead of DRI3 with Intel Iris" >> 
 RUN echo "# Select Nav2 Turtlebot3 waffle model" >> /root/.bashrc \
     && echo "export TURTLEBOT3_MODEL=waffle" >> /root/.bashrc
 
-RUN echo "# Select GAZEBO_MODEL_PATH" >> /root/.bashrc \
+RUN echo "# Select GAZEBO_MODEL_PATH for Gazebo" >> /root/.bashrc \
     && echo "export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/<ros2-distro>/share/turtlebot3_gazebo/models" >> /root/.bashrc
+
+RUN echo "# Select GZ_SIM_RESOURCE_PATH for Ignition Gazebo" >> /root/.bashrc \
+    && echo "export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:/workspace/ros2_ws_diff_drive/src/ros_gz/ros_gz_description/models/" >> /root/.bashrc \
+    && echo "export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/" >> /root/.bashrc
     
 RUN echo "# Source ROS2 Humble environment" >> /root/.bashrc \
     && echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
 
 RUN echo "# Change dir to ros2_ws when container is started" >> /root/.bashrc \
-    && echo "cd /ros2_ws/" >> /root/.bashrc
+    && echo "cd /workspace/" >> /root/.bashrc
 
-WORKDIR /ros2_ws
+RUN echo "# Alias to build ros2 project" >> /root/.bashrc \
+    && echo "alias build='colcon build && source install/setup.bash'" >> /root/.bashrc
+
+RUN echo "# Alias to launch ros2 project" >> /root/.bashrc \
+    && echo "alias launch='ros2 launch launch launch.py'" >> /root/.bashrc
+
+WORKDIR /workspace

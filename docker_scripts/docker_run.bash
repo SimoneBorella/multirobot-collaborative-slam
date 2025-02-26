@@ -56,8 +56,7 @@ docker run -it \
     --env XAUTHORITY=$XAUTH \
     --volume $XAUTH:$XAUTH \
     --net host \
-    -v $DOCKERFILE_PATH/ros2_ws:/ros2_ws \
-    -v $DOCKERFILE_PATH/gtsam_examples:/gtsam_examples \
+    -v $DOCKERFILE_PATH/workspace:/workspace \
     --name $IMAGE \
     --hostname $IMAGE \
     $IMAGE:$TAG

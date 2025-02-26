@@ -1,0 +1,6 @@
+Invoking command in '/ros2_ws/build/turtlebot3': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/turtlebot3 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/turtlebot3
+Invoked command in '/ros2_ws/build/turtlebot3' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/turtlebot3 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/turtlebot3
+Invoking command in '/ros2_ws/build/turtlebot3': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/turtlebot3 -- -j8 -l8
+Invoked command in '/ros2_ws/build/turtlebot3' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/turtlebot3 -- -j8 -l8
+Invoking command in '/ros2_ws/build/turtlebot3': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/turtlebot3
+Invoked command in '/ros2_ws/build/turtlebot3' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/turtlebot3
