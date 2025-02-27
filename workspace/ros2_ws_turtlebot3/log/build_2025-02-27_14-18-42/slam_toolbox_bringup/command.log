@@ -1,1 +1,0 @@
-Invoking command in '/workspace/ros2_ws_turtlebot3/build/slam_toolbox_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /workspace/ros2_ws_turtlebot3/src/slam_toolbox_bringup -DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup

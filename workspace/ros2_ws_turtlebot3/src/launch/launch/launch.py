@@ -32,9 +32,9 @@ def generate_launch_description():
         }.items()
     )
 
-    slam_toolbox_bringup_launch_description = IncludeLaunchDescription(
+    nav2_bringup_launch_description = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
-            os.path.join(get_package_share_directory('slam_toolbox_bringup'), 'launch', 'launch.py')
+            os.path.join(get_package_share_directory('slam_nav2_bringup'), 'launch', 'launch.py')
         ]),
         launch_arguments={
         }.items(),
@@ -47,6 +47,6 @@ def generate_launch_description():
 
         # Launch descriptions
         ros_gz_launch_description,
-        slam_toolbox_bringup_launch_description
+        nav2_bringup_launch_description
     ])
 
