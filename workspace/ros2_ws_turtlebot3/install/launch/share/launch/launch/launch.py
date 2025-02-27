@@ -20,15 +20,24 @@ def generate_launch_description():
     # )
 
 
+
     # Launch descriptions
 
     ros_gz_launch_description = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
-            os.path.join(get_package_share_directory('ros_gz_bringup'), 'launch'),'/launch.py'
+            os.path.join(get_package_share_directory('ros_gz_bringup'), 'launch','launch.py')
         ]),
         launch_arguments={
             # 'sim_type': LaunchConfiguration('sim_type'),
         }.items()
+    )
+
+    slam_toolbox_bringup_launch_description = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(get_package_share_directory('slam_toolbox_bringup'), 'launch', 'launch.py')
+        ]),
+        launch_arguments={
+        }.items(),
     )
     
 
@@ -37,6 +46,7 @@ def generate_launch_description():
         # sim_type_launch_arg,
 
         # Launch descriptions
-        ros_gz_launch_description
+        ros_gz_launch_description,
+        # slam_toolbox_bringup_launch_description
     ])
 

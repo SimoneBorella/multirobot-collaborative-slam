@@ -82,5 +82,5 @@ RUN echo "# Alias to build ros2 project" >> /root/.bashrc \
 
 RUN echo "# Alias to launch ros2 project" >> /root/.bashrc \
     && echo "alias launch='ros2 launch launch launch.py'" >> /root/.bashrc
-
+    
 WORKDIR /workspace

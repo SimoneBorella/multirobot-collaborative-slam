@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /ros2_ws/src/launch
+CMAKE_SOURCE_DIR = /workspace/ros2_ws_turtlebot3/src/launch
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /ros2_ws/build/launch
+CMAKE_BINARY_DIR = /workspace/ros2_ws_turtlebot3/build/launch
 
 # Utility rule file for launch_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/launch_uninstall.dir/compiler_depend.make
 include CMakeFiles/launch_uninstall.dir/progress.make
 
 CMakeFiles/launch_uninstall:
-	/usr/bin/cmake -P /ros2_ws/build/launch/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /workspace/ros2_ws_turtlebot3/build/launch/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 launch_uninstall: CMakeFiles/launch_uninstall
 launch_uninstall: CMakeFiles/launch_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/launch_uninstall.dir/clean:
 .PHONY : CMakeFiles/launch_uninstall.dir/clean
 
 CMakeFiles/launch_uninstall.dir/depend:
-	cd /ros2_ws/build/launch && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /ros2_ws/src/launch /ros2_ws/src/launch /ros2_ws/build/launch /ros2_ws/build/launch /ros2_ws/build/launch/CMakeFiles/launch_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/ros2_ws_turtlebot3/build/launch && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/ros2_ws_turtlebot3/src/launch /workspace/ros2_ws_turtlebot3/src/launch /workspace/ros2_ws_turtlebot3/build/launch /workspace/ros2_ws_turtlebot3/build/launch /workspace/ros2_ws_turtlebot3/build/launch/CMakeFiles/launch_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/launch_uninstall.dir/depend
 

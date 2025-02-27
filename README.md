@@ -28,12 +28,24 @@ URDF to SDF:
 
 
 
-Model topic commands:
-<!--
-  Try sending commands:
-    gz topic -t "/model/diff_drive/cmd_vel" -m gz.msgs.Twist -p "linear: {x: 1.0}, angular: {z: -0.1}"
-    ros2 topic pub /diff_drive/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 5.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.1}}"
-  Listen to odometry:
-    gz topic -e -t /model/diff_drive/odometry
-    ros2 topic echo /model/diff_drive/odometry
--->
+
+ign topic -l
+ign topic -i --topic topic_name
+
+
+
+
+ros2 topic pub /diff_drive/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 5.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.1}}"
+
+
+
+TF2 visualization (generate pdf):
+	ros2 run tf2_tools view_frames
+
+
+
+RUN SLAM TOOLBOX
+	ros2 launch slam_toolbox online_async_launch.py use_sim_time:=true
+
+
+ros2 launch slam_toolbox online_async_launch.py use_sim_time:=true /turtlebot3_waffle/scan:=/scan

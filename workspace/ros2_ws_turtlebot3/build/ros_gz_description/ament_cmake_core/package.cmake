@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "ros_gz_description")
 set(ros_gz_description_VERSION "0.0.0")
-set(ros_gz_description_MAINTAINER "Michael Carroll <michael@openrobotics.org>")
+set(ros_gz_description_MAINTAINER "root <root@todo.todo>")
 set(ros_gz_description_BUILD_DEPENDS )
 set(ros_gz_description_BUILDTOOL_DEPENDS "ament_cmake")
 set(ros_gz_description_BUILD_EXPORT_DEPENDS )

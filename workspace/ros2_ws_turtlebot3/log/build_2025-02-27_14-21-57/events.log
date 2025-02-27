@@ -1,0 +1,446 @@
+[0.000000] (-) TimerEvent: {}
+[0.000230] (launch) JobQueued: {'identifier': 'launch', 'dependencies': OrderedDict()}
+[0.000253] (ros_gz_description) JobQueued: {'identifier': 'ros_gz_description', 'dependencies': OrderedDict()}
+[0.000269] (ros_gz_gazebo) JobQueued: {'identifier': 'ros_gz_gazebo', 'dependencies': OrderedDict([('ros_gz_description', '/workspace/ros2_ws_turtlebot3/install/ros_gz_description')])}
+[0.000283] (ros_gz_bringup) JobQueued: {'identifier': 'ros_gz_bringup', 'dependencies': OrderedDict([('ros_gz_description', '/workspace/ros2_ws_turtlebot3/install/ros_gz_description'), ('ros_gz_gazebo', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo')])}
+[0.000575] (ros_gz_description) JobStarted: {'identifier': 'ros_gz_description'}
+[0.006324] (launch) JobStarted: {'identifier': 'launch'}
+[0.010325] (ros_gz_description) JobProgress: {'identifier': 'ros_gz_description', 'progress': 'cmake'}
+[0.010733] (ros_gz_description) JobProgress: {'identifier': 'ros_gz_description', 'progress': 'build'}
+[0.011155] (ros_gz_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/ros2_ws_turtlebot3/build/ros_gz_description', '--', '-j8', '-l8'], 'cwd': '/workspace/ros2_ws_turtlebot3/build/ros_gz_description', 'env': OrderedDict([('GZ_SIM_RESOURCE_PATH', ':/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/'), ('HOSTNAME', 'multirobot_collaborative_slam'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/workspace'), ('LIBGL_DRI3_DISABLE', '1'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo/'), ('IGN_GAZEBO_RESOURCE_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds:/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share'), ('PWD', '/workspace/ros2_ws_turtlebot3/build/ros_gz_description'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble')]), 'shell': False}
+[0.013313] (launch) JobProgress: {'identifier': 'launch', 'progress': 'cmake'}
+[0.013664] (launch) JobProgress: {'identifier': 'launch', 'progress': 'build'}
+[0.013887] (launch) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/ros2_ws_turtlebot3/build/launch', '--', '-j8', '-l8'], 'cwd': '/workspace/ros2_ws_turtlebot3/build/launch', 'env': OrderedDict([('GZ_SIM_RESOURCE_PATH', ':/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/'), ('HOSTNAME', 'multirobot_collaborative_slam'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/workspace'), ('LIBGL_DRI3_DISABLE', '1'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo/'), ('IGN_GAZEBO_RESOURCE_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds:/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share'), ('PWD', '/workspace/ros2_ws_turtlebot3/build/launch'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble')]), 'shell': False}
+[0.027381] (ros_gz_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.037755] (launch) CommandEnded: {'returncode': 0}
+[0.051021] (launch) JobProgress: {'identifier': 'launch', 'progress': 'install'}
+[0.056772] (launch) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/ros2_ws_turtlebot3/build/launch'], 'cwd': '/workspace/ros2_ws_turtlebot3/build/launch', 'env': OrderedDict([('GZ_SIM_RESOURCE_PATH', ':/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/'), ('HOSTNAME', 'multirobot_collaborative_slam'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/workspace'), ('LIBGL_DRI3_DISABLE', '1'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo/'), ('IGN_GAZEBO_RESOURCE_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds:/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share'), ('PWD', '/workspace/ros2_ws_turtlebot3/build/launch'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble')]), 'shell': False}
+[0.061797] (launch) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[0.061925] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch//launch\n'}
+[0.061996] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch//launch/launch.py\n'}
+[0.062073] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/ament_index/resource_index/package_run_dependencies/launch\n'}
+[0.062176] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/ament_index/resource_index/parent_prefix_path/launch\n'}
+[0.062284] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/environment/ament_prefix_path.sh\n'}
+[0.062372] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/environment/ament_prefix_path.dsv\n'}
+[0.062454] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/environment/path.sh\n'}
+[0.062532] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/environment/path.dsv\n'}
+[0.062610] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/local_setup.bash\n'}
+[0.062700] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/local_setup.sh\n'}
+[0.062782] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/local_setup.zsh\n'}
+[0.062858] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/local_setup.dsv\n'}
+[0.062935] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/package.dsv\n'}
+[0.063033] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/ament_index/resource_index/packages/launch\n'}
+[0.063130] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/cmake/launchConfig.cmake\n'}
+[0.063195] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/cmake/launchConfig-version.cmake\n'}
+[0.063274] (launch) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/package.xml\n'}
+[0.064696] (launch) CommandEnded: {'returncode': 0}
+[0.090066] (launch) JobEnded: {'identifier': 'launch', 'rc': 0}
+[0.099825] (-) TimerEvent: {}
+[0.116821] (ros_gz_description) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.168194] (ros_gz_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.169987] (ros_gz_description) StdoutLine: {'line': b'-- Generating done\n'}
+[0.170573] (ros_gz_description) StdoutLine: {'line': b'-- Build files have been written to: /workspace/ros2_ws_turtlebot3/build/ros_gz_description\n'}
+[0.186543] (ros_gz_description) CommandEnded: {'returncode': 0}
+[0.199903] (-) TimerEvent: {}
+[0.203073] (ros_gz_description) JobProgress: {'identifier': 'ros_gz_description', 'progress': 'install'}
+[0.203391] (ros_gz_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/ros2_ws_turtlebot3/build/ros_gz_description'], 'cwd': '/workspace/ros2_ws_turtlebot3/build/ros_gz_description', 'env': OrderedDict([('GZ_SIM_RESOURCE_PATH', ':/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/'), ('HOSTNAME', 'multirobot_collaborative_slam'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/workspace'), ('LIBGL_DRI3_DISABLE', '1'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo/'), ('IGN_GAZEBO_RESOURCE_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds:/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share'), ('PWD', '/workspace/ros2_ws_turtlebot3/build/ros_gz_description'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble')]), 'shell': False}
+[0.209677] (ros_gz_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.209823] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models\n'}
+[0.209902] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models/turtlebot3\n'}
+[0.209975] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models/turtlebot3/model.sdf\n'}
+[0.210045] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models/turtlebot3/meshes\n'}
+[0.210109] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models/turtlebot3/meshes/lds.dae\n'}
+[0.210440] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models/turtlebot3/meshes/tire.dae\n'}
+[0.210701] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models/turtlebot3/meshes/burger_base.dae\n'}
+[0.210900] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models/turtlebot3/meshes/waffle_pi_base.dae\n'}
+[0.211109] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models/turtlebot3/meshes/waffle_base.dae\n'}
+[0.211288] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models/turtlebot3/meshes/r200.dae\n'}
+[0.211912] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models/turtlebot3/model.config\n'}
+[0.212161] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/environment/ros_gz_description.dsv\n'}
+[0.212268] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/environment/ros_gz_description.sh\n'}
+[0.212421] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ament_index/resource_index/package_run_dependencies/ros_gz_description\n'}
+[0.212550] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ament_index/resource_index/parent_prefix_path/ros_gz_description\n'}
+[0.212671] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/environment/ament_prefix_path.sh\n'}
+[0.212781] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/environment/ament_prefix_path.dsv\n'}
+[0.212881] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/environment/path.sh\n'}
+[0.212982] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/environment/path.dsv\n'}
+[0.213078] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/local_setup.bash\n'}
+[0.213174] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/local_setup.sh\n'}
+[0.213274] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/local_setup.zsh\n'}
+[0.213373] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/local_setup.dsv\n'}
+[0.213467] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/package.dsv\n'}
+[0.213592] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ament_index/resource_index/packages/ros_gz_description\n'}
+[0.213722] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/cmake/ros_gz_descriptionConfig.cmake\n'}
+[0.213803] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/cmake/ros_gz_descriptionConfig-version.cmake\n'}
+[0.213905] (ros_gz_description) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/package.xml\n'}
+[0.215539] (ros_gz_description) CommandEnded: {'returncode': 0}
+[0.241578] (ros_gz_description) JobEnded: {'identifier': 'ros_gz_description', 'rc': 0}
+[0.242532] (ros_gz_gazebo) JobStarted: {'identifier': 'ros_gz_gazebo'}
+[0.248836] (ros_gz_gazebo) JobProgress: {'identifier': 'ros_gz_gazebo', 'progress': 'cmake'}
+[0.249529] (ros_gz_gazebo) Command: {'cmd': ['/usr/bin/cmake', '/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_gazebo', '-DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo'], 'cwd': '/workspace/ros2_ws_turtlebot3/build/ros_gz_gazebo', 'env': OrderedDict([('GZ_SIM_RESOURCE_PATH', ':/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/'), ('HOSTNAME', 'multirobot_collaborative_slam'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/workspace'), ('LIBGL_DRI3_DISABLE', '1'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo/'), ('IGN_GAZEBO_RESOURCE_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds:/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share'), ('PWD', '/workspace/ros2_ws_turtlebot3/build/ros_gz_gazebo'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble')]), 'shell': False}
+[0.260725] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299997] (-) TimerEvent: {}
+[0.383520] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found ros_gz_description: 0.0.0 (/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/cmake)\n'}
+[0.394490] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[0.394907] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1\n'}
+[0.395503] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [register]\n'}
+[0.399456] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1-register -- found version 1.4.0\n'}
+[0.399870] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1-register\n'}
+[0.400049] (-) TimerEvent: {}
+[0.404409] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[0.404800] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4\n'}
+[0.405786] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[0.413557] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[0.415158] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[0.420305] (ros_gz_gazebo) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[0.431417] (ros_gz_gazebo) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[0.457378] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[0.458189] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [profiler]\n'}
+[0.461842] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4-profiler -- found version 4.7.0\n'}
+[0.462569] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-profiler\n'}
+[0.468709] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-gazebo6 -- found version 6.16.0\n'}
+[0.469265] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-gazebo6\n'}
+[0.473055] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for sdformat12 -- found version 12.7.2\n'}
+[0.473522] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of sdformat12\n'}
+[0.478611] (ros_gz_gazebo) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[0.489079] (ros_gz_gazebo) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[0.500214] (-) TimerEvent: {}
+[0.518401] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[0.518741] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[0.523337] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[0.523822] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-utils1\n'}
+[0.525594] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[0.525932] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1\n'}
+[0.526188] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [loader]\n'}
+[0.530045] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1-loader -- found version 1.4.0\n'}
+[0.530649] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1-loader\n'}
+[0.531411] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [register]\n'}
+[0.535518] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-transport11 -- found version 11.4.1\n'}
+[0.535858] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport11\n'}
+[0.600341] (-) TimerEvent: {}
+[0.700641] (-) TimerEvent: {}
+[0.704004] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[0.721204] (ros_gz_gazebo) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[0.725619] (ros_gz_gazebo) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[0.736228] (ros_gz_gazebo) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[0.766444] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[0.778481] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[0.778908] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-utils1\n'}
+[0.779034] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-utils1> component [cli]\n'}
+[0.782375] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-utils1-cli -- found version 1.5.1\n'}
+[0.782830] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-utils1-cli\n'}
+[0.794248] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[0.794609] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs8\n'}
+[0.800707] (-) TimerEvent: {}
+[0.817983] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[0.818781] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[0.825951] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-transport11> component [log]\n'}
+[0.829309] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-transport11-log -- found version 11.4.1\n'}
+[0.829806] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport11-log\n'}
+[0.830237] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-transport11> component [parameters]\n'}
+[0.833643] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-transport11-parameters -- found version 11.4.1\n'}
+[0.834174] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport11-parameters\n'}
+[0.835084] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[0.835418] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[0.835946] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4\n'}
+[0.836078] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[0.836137] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[0.844214] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [profiler]\n'}
+[0.844547] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [events]\n'}
+[0.847947] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4-events -- found version 4.7.0\n'}
+[0.848291] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-events\n'}
+[0.848724] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[0.849279] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [av]\n'}
+[0.852610] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4-av -- found version 4.7.0\n'}
+[0.853182] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-av\n'}
+[0.857672] (ros_gz_gazebo) StdoutLine: {'line': b"-- Checking for module 'libswscale'\n"}
+[0.868441] (ros_gz_gazebo) StdoutLine: {'line': b'--   Found libswscale, version 5.9.100\n'}
+[0.895744] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found SWSCALE: TRUE  \n'}
+[0.900257] (ros_gz_gazebo) StdoutLine: {'line': b"-- Checking for module 'libavdevice >= 56.4.100'\n"}
+[0.900771] (-) TimerEvent: {}
+[0.912012] (ros_gz_gazebo) StdoutLine: {'line': b'--   Found libavdevice , version 58.13.100\n'}
+[0.943969] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found AVDEVICE: TRUE (Required is at least version "56.4.100") \n'}
+[0.948609] (ros_gz_gazebo) StdoutLine: {'line': b"-- Checking for module 'libavformat'\n"}
+[0.959537] (ros_gz_gazebo) StdoutLine: {'line': b'--   Found libavformat, version 58.76.100\n'}
+[0.988684] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found AVFORMAT: TRUE  \n'}
+[0.993551] (ros_gz_gazebo) StdoutLine: {'line': b"-- Checking for module 'libavcodec'\n"}
+[1.000941] (-) TimerEvent: {}
+[1.005097] (ros_gz_gazebo) StdoutLine: {'line': b'--   Found libavcodec, version 58.134.100\n'}
+[1.035258] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found AVCODEC: TRUE  \n'}
+[1.040168] (ros_gz_gazebo) StdoutLine: {'line': b"-- Checking for module 'libavutil'\n"}
+[1.051372] (ros_gz_gazebo) StdoutLine: {'line': b'--   Found libavutil, version 56.70.100\n'}
+[1.079904] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found AVUTIL: TRUE  \n'}
+[1.084287] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools7 -- found version 7.3.0\n'}
+[1.084828] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools7\n'}
+[1.101033] (-) TimerEvent: {}
+[1.166957] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  \n'}
+[1.176333] (ros_gz_gazebo) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[1.187970] (ros_gz_gazebo) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[1.201128] (-) TimerEvent: {}
+[1.216449] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[1.222370] (ros_gz_gazebo) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[1.233845] (ros_gz_gazebo) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[1.261566] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[1.262037] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.262345] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.262794] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[1.274927] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-gui6 -- found version 6.8.0\n'}
+[1.275348] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-gui6\n'}
+[1.301236] (-) TimerEvent: {}
+[1.307735] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.308124] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.308517] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[1.308831] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-transport11 -- found version 11.4.1\n'}
+[1.312431] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-rendering6 -- found version 6.6.3\n'}
+[1.312980] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-rendering6\n'}
+[1.313404] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.313782] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[1.313893] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-math6> component [eigen3]\n'}
+[1.317289] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6-eigen3 -- found version 6.15.1\n'}
+[1.317771] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6-eigen3\n'}
+[1.328750] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.329153] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4\n'}
+[1.329355] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[1.329453] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[1.337891] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [graphics]\n'}
+[1.341238] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4-graphics -- found version 4.7.0\n'}
+[1.341578] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-graphics\n'}
+[1.342086] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.342415] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[1.343026] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [events]\n'}
+[1.343840] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[1.344288] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1\n'}
+[1.344387] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [all]\n'}
+[1.347671] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for all libraries of ignition-plugin1 -- found version 1.4.0\n'}
+[1.348100] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[1.350243] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[1.376875] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-physics5 -- found version 5.3.2\n'}
+[1.377295] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5\n'}
+[1.377587] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.378145] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[1.378410] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[1.379582] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-physics5> component [heightmap]\n'}
+[1.382956] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-physics5-heightmap -- found version 5.3.2\n'}
+[1.383354] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5-heightmap\n'}
+[1.383641] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.384142] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-physics5> component [mesh]\n'}
+[1.387464] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-physics5-mesh -- found version 5.3.2\n'}
+[1.387841] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5-mesh\n'}
+[1.388129] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.388583] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-physics5> component [sdf]\n'}
+[1.391863] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-physics5-sdf -- found version 5.3.2\n'}
+[1.392303] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5-sdf\n'}
+[1.392591] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for sdformat12 -- found version 12.7.2\n'}
+[1.396696] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[1.396988] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6\n'}
+[1.401320] (-) TimerEvent: {}
+[1.422143] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[1.423264] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.423797] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.424365] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-transport11 -- found version 11.4.1\n'}
+[1.424963] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-rendering6 -- found version 6.6.3\n'}
+[1.425648] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[1.426290] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for sdformat12 -- found version 12.7.2\n'}
+[1.427043] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [air_pressure]\n'}
+[1.430909] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-air_pressure -- found version 6.8.0\n'}
+[1.431683] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-air_pressure\n'}
+[1.432516] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [altimeter]\n'}
+[1.436094] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-altimeter -- found version 6.8.0\n'}
+[1.436751] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-altimeter\n'}
+[1.437481] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [imu]\n'}
+[1.441198] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-imu -- found version 6.8.0\n'}
+[1.441805] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-imu\n'}
+[1.442426] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [force_torque]\n'}
+[1.446306] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-force_torque -- found version 6.8.0\n'}
+[1.446818] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-force_torque\n'}
+[1.447482] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [logical_camera]\n'}
+[1.451294] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-logical_camera -- found version 6.8.0\n'}
+[1.451874] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-logical_camera\n'}
+[1.452567] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [magnetometer]\n'}
+[1.456263] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-magnetometer -- found version 6.8.0\n'}
+[1.456852] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-magnetometer\n'}
+[1.457607] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [navsat]\n'}
+[1.461354] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-navsat -- found version 6.8.0\n'}
+[1.461864] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-navsat\n'}
+[1.462633] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [rendering]\n'}
+[1.466447] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-rendering -- found version 6.8.0\n'}
+[1.467052] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-rendering\n'}
+[1.467767] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [lidar]\n'}
+[1.471544] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-lidar -- found version 6.8.0\n'}
+[1.472101] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-lidar\n'}
+[1.472671] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[1.473646] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [gpu_lidar]\n'}
+[1.477229] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-gpu_lidar -- found version 6.8.0\n'}
+[1.477930] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-gpu_lidar\n'}
+[1.478517] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[1.479411] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [camera]\n'}
+[1.482997] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-camera -- found version 6.8.0\n'}
+[1.483624] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-camera\n'}
+[1.484206] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[1.484956] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [boundingbox_camera]\n'}
+[1.488729] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-boundingbox_camera -- found version 6.8.0\n'}
+[1.489351] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-boundingbox_camera\n'}
+[1.490142] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [segmentation_camera]\n'}
+[1.493826] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-segmentation_camera -- found version 6.8.0\n'}
+[1.494300] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-segmentation_camera\n'}
+[1.495151] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [depth_camera]\n'}
+[1.498842] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-depth_camera -- found version 6.8.0\n'}
+[1.499464] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-depth_camera\n'}
+[1.500146] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[1.500746] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [rgbd_camera]\n'}
+[1.501397] (-) TimerEvent: {}
+[1.504594] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-rgbd_camera -- found version 6.8.0\n'}
+[1.505184] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-rgbd_camera\n'}
+[1.505732] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[1.506576] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [thermal_camera]\n'}
+[1.510324] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-thermal_camera -- found version 6.8.0\n'}
+[1.511074] (ros_gz_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-thermal_camera\n'}
+[1.511643] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[1.512956] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-rendering6 -- found version 6.6.3\n'}
+[1.513567] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.517571] (ros_gz_gazebo) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[1.545130] (ros_gz_gazebo) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.601527] (-) TimerEvent: {}
+[1.611282] (ros_gz_gazebo) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.630746] (ros_gz_gazebo) StdoutLine: {'line': b'-- Generating done\n'}
+[1.633361] (ros_gz_gazebo) StdoutLine: {'line': b'-- Build files have been written to: /workspace/ros2_ws_turtlebot3/build/ros_gz_gazebo\n'}
+[1.639320] (ros_gz_gazebo) CommandEnded: {'returncode': 0}
+[1.639976] (ros_gz_gazebo) JobProgress: {'identifier': 'ros_gz_gazebo', 'progress': 'build'}
+[1.640478] (ros_gz_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/ros2_ws_turtlebot3/build/ros_gz_gazebo', '--', '-j8', '-l8'], 'cwd': '/workspace/ros2_ws_turtlebot3/build/ros_gz_gazebo', 'env': OrderedDict([('GZ_SIM_RESOURCE_PATH', ':/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/'), ('HOSTNAME', 'multirobot_collaborative_slam'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/workspace'), ('LIBGL_DRI3_DISABLE', '1'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo/'), ('IGN_GAZEBO_RESOURCE_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds:/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share'), ('PWD', '/workspace/ros2_ws_turtlebot3/build/ros_gz_gazebo'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble')]), 'shell': False}
+[1.685348] (ros_gz_gazebo) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/BasicSystem.dir/src/BasicSystem.cc.o\x1b[0m\n'}
+[1.685520] (ros_gz_gazebo) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/FullSystem.dir/src/FullSystem.cc.o\x1b[0m\n'}
+[1.701723] (-) TimerEvent: {}
+[1.802014] (-) TimerEvent: {}
+[1.902360] (-) TimerEvent: {}
+[2.002663] (-) TimerEvent: {}
+[2.102979] (-) TimerEvent: {}
+[2.203334] (-) TimerEvent: {}
+[2.303639] (-) TimerEvent: {}
+[2.404002] (-) TimerEvent: {}
+[2.504372] (-) TimerEvent: {}
+[2.604740] (-) TimerEvent: {}
+[2.705117] (-) TimerEvent: {}
+[2.805493] (-) TimerEvent: {}
+[2.905883] (-) TimerEvent: {}
+[3.006253] (-) TimerEvent: {}
+[3.106637] (-) TimerEvent: {}
+[3.207015] (-) TimerEvent: {}
+[3.307391] (-) TimerEvent: {}
+[3.407798] (-) TimerEvent: {}
+[3.508180] (-) TimerEvent: {}
+[3.608555] (-) TimerEvent: {}
+[3.708947] (-) TimerEvent: {}
+[3.809307] (-) TimerEvent: {}
+[3.909691] (-) TimerEvent: {}
+[4.010053] (-) TimerEvent: {}
+[4.110419] (-) TimerEvent: {}
+[4.210795] (-) TimerEvent: {}
+[4.311172] (-) TimerEvent: {}
+[4.411535] (-) TimerEvent: {}
+[4.511921] (-) TimerEvent: {}
+[4.612216] (-) TimerEvent: {}
+[4.712577] (-) TimerEvent: {}
+[4.812971] (-) TimerEvent: {}
+[4.913323] (-) TimerEvent: {}
+[5.013674] (-) TimerEvent: {}
+[5.114033] (-) TimerEvent: {}
+[5.214331] (-) TimerEvent: {}
+[5.314647] (-) TimerEvent: {}
+[5.324259] (ros_gz_gazebo) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library libBasicSystem.so\x1b[0m\n'}
+[5.412365] (ros_gz_gazebo) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libFullSystem.so\x1b[0m\n'}
+[5.414713] (-) TimerEvent: {}
+[5.515025] (-) TimerEvent: {}
+[5.542701] (ros_gz_gazebo) StdoutLine: {'line': b'[100%] Built target BasicSystem\n'}
+[5.615213] (-) TimerEvent: {}
+[5.642138] (ros_gz_gazebo) StdoutLine: {'line': b'[100%] Built target FullSystem\n'}
+[5.651801] (ros_gz_gazebo) CommandEnded: {'returncode': 0}
+[5.677109] (ros_gz_gazebo) JobProgress: {'identifier': 'ros_gz_gazebo', 'progress': 'install'}
+[5.677646] (ros_gz_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/ros2_ws_turtlebot3/build/ros_gz_gazebo'], 'cwd': '/workspace/ros2_ws_turtlebot3/build/ros_gz_gazebo', 'env': OrderedDict([('GZ_SIM_RESOURCE_PATH', ':/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/'), ('HOSTNAME', 'multirobot_collaborative_slam'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/workspace'), ('LIBGL_DRI3_DISABLE', '1'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo/'), ('IGN_GAZEBO_RESOURCE_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds:/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share'), ('PWD', '/workspace/ros2_ws_turtlebot3/build/ros_gz_gazebo'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble')]), 'shell': False}
+[5.684430] (ros_gz_gazebo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.684586] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo/libBasicSystem.so\n'}
+[5.685560] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo/libFullSystem.so\n'}
+[5.686763] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds\n'}
+[5.686901] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds/turtlebot3_world.sdf\n'}
+[5.686993] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds/meshes\n'}
+[5.687097] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds/meshes/hexagon.dae\n'}
+[5.687247] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds/meshes/wall.dae\n'}
+[5.687507] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/environment/ros_gz_gazebo.dsv\n'}
+[5.687634] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/environment/ros_gz_gazebo.sh\n'}
+[5.687805] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ament_index/resource_index/package_run_dependencies/ros_gz_gazebo\n'}
+[5.687950] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ament_index/resource_index/parent_prefix_path/ros_gz_gazebo\n'}
+[5.688070] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/environment/ament_prefix_path.sh\n'}
+[5.688194] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/environment/ament_prefix_path.dsv\n'}
+[5.688309] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/environment/path.sh\n'}
+[5.688387] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/environment/path.dsv\n'}
+[5.688494] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/local_setup.bash\n'}
+[5.688601] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/local_setup.sh\n'}
+[5.688717] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/local_setup.zsh\n'}
+[5.688823] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/local_setup.dsv\n'}
+[5.688930] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/package.dsv\n'}
+[5.689077] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ament_index/resource_index/packages/ros_gz_gazebo\n'}
+[5.689210] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/cmake/ros_gz_gazeboConfig.cmake\n'}
+[5.689302] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/cmake/ros_gz_gazeboConfig-version.cmake\n'}
+[5.689408] (ros_gz_gazebo) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/package.xml\n'}
+[5.690990] (ros_gz_gazebo) CommandEnded: {'returncode': 0}
+[5.715301] (-) TimerEvent: {}
+[5.729767] (ros_gz_gazebo) JobEnded: {'identifier': 'ros_gz_gazebo', 'rc': 0}
+[5.730731] (ros_gz_bringup) JobStarted: {'identifier': 'ros_gz_bringup'}
+[5.737588] (ros_gz_bringup) JobProgress: {'identifier': 'ros_gz_bringup', 'progress': 'cmake'}
+[5.737899] (ros_gz_bringup) Command: {'cmd': ['/usr/bin/cmake', '/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_bringup', '-DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup'], 'cwd': '/workspace/ros2_ws_turtlebot3/build/ros_gz_bringup', 'env': OrderedDict([('GZ_SIM_RESOURCE_PATH', ':/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/'), ('HOSTNAME', 'multirobot_collaborative_slam'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/workspace'), ('LIBGL_DRI3_DISABLE', '1'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo/'), ('IGN_GAZEBO_RESOURCE_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds:/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share'), ('IGN_GAZEBO_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo'), ('PWD', '/workspace/ros2_ws_turtlebot3/build/ros_gz_bringup'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble')]), 'shell': False}
+[5.789290] (ros_gz_bringup) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[5.815529] (-) TimerEvent: {}
+[5.843678] (ros_gz_bringup) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[5.850755] (ros_gz_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[5.911799] (ros_gz_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[5.915690] (-) TimerEvent: {}
+[5.918945] (ros_gz_bringup) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[5.919180] (ros_gz_bringup) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.919586] (ros_gz_bringup) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.922735] (ros_gz_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.995996] (ros_gz_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[6.003369] (ros_gz_bringup) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[6.003606] (ros_gz_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[6.004086] (ros_gz_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[6.007806] (ros_gz_bringup) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[6.015847] (-) TimerEvent: {}
+[6.116168] (-) TimerEvent: {}
+[6.153025] (ros_gz_bringup) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[6.216292] (-) TimerEvent: {}
+[6.252812] (ros_gz_bringup) StdoutLine: {'line': b'-- Found ros_gz_description: 0.0.0 (/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/cmake)\n'}
+[6.253107] (ros_gz_bringup) StdoutLine: {'line': b'-- Found ros_gz_gazebo: 0.0.0 (/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/cmake)\n'}
+[6.255550] (ros_gz_bringup) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[6.316416] (-) TimerEvent: {}
+[6.317728] (ros_gz_bringup) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.320183] (ros_gz_bringup) StdoutLine: {'line': b'-- Generating done\n'}
+[6.320915] (ros_gz_bringup) StdoutLine: {'line': b'-- Build files have been written to: /workspace/ros2_ws_turtlebot3/build/ros_gz_bringup\n'}
+[6.324937] (ros_gz_bringup) CommandEnded: {'returncode': 0}
+[6.325373] (ros_gz_bringup) JobProgress: {'identifier': 'ros_gz_bringup', 'progress': 'build'}
+[6.325718] (ros_gz_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/ros2_ws_turtlebot3/build/ros_gz_bringup', '--', '-j8', '-l8'], 'cwd': '/workspace/ros2_ws_turtlebot3/build/ros_gz_bringup', 'env': OrderedDict([('GZ_SIM_RESOURCE_PATH', ':/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/'), ('HOSTNAME', 'multirobot_collaborative_slam'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/workspace'), ('LIBGL_DRI3_DISABLE', '1'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo/'), ('IGN_GAZEBO_RESOURCE_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds:/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share'), ('IGN_GAZEBO_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo'), ('PWD', '/workspace/ros2_ws_turtlebot3/build/ros_gz_bringup'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble')]), 'shell': False}
+[6.359441] (ros_gz_bringup) CommandEnded: {'returncode': 0}
+[6.378112] (ros_gz_bringup) JobProgress: {'identifier': 'ros_gz_bringup', 'progress': 'install'}
+[6.378493] (ros_gz_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/ros2_ws_turtlebot3/build/ros_gz_bringup'], 'cwd': '/workspace/ros2_ws_turtlebot3/build/ros_gz_bringup', 'env': OrderedDict([('GZ_SIM_RESOURCE_PATH', ':/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/'), ('HOSTNAME', 'multirobot_collaborative_slam'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/workspace'), ('LIBGL_DRI3_DISABLE', '1'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo/'), ('IGN_GAZEBO_RESOURCE_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share/ros_gz_description/models:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/share/ros_gz_gazebo/worlds:/workspace/ros2_ws_turtlebot3/install/ros_gz_description/share'), ('IGN_GAZEBO_PLUGIN_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo/lib/ros_gz_gazebo'), ('PWD', '/workspace/ros2_ws_turtlebot3/build/ros_gz_bringup'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/slam_toolbox_bringup:/workspace/ros2_ws_turtlebot3/install/slam_toolbox:/workspace/ros2_ws_turtlebot3/install/turtlebot3:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble')]), 'shell': False}
+[6.385853] (ros_gz_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.386078] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/launch\n'}
+[6.386201] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/launch/launch.py\n'}
+[6.386327] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/config\n'}
+[6.386444] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/config/ros_gz_bridge.yaml\n'}
+[6.386563] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/config/turtlebot3.rviz\n'}
+[6.386875] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ament_index/resource_index/package_run_dependencies/ros_gz_bringup\n'}
+[6.387128] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ament_index/resource_index/parent_prefix_path/ros_gz_bringup\n'}
+[6.387354] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/environment/ament_prefix_path.sh\n'}
+[6.387523] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/environment/ament_prefix_path.dsv\n'}
+[6.387708] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/environment/path.sh\n'}
+[6.387895] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/environment/path.dsv\n'}
+[6.388062] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/local_setup.bash\n'}
+[6.388231] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/local_setup.sh\n'}
+[6.388406] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/local_setup.zsh\n'}
+[6.388574] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/local_setup.dsv\n'}
+[6.388748] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/package.dsv\n'}
+[6.388953] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ament_index/resource_index/packages/ros_gz_bringup\n'}
+[6.389154] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/cmake/ros_gz_bringupConfig.cmake\n'}
+[6.389305] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/cmake/ros_gz_bringupConfig-version.cmake\n'}
+[6.389463] (ros_gz_bringup) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws_turtlebot3/install/ros_gz_bringup/share/ros_gz_bringup/package.xml\n'}
+[6.391242] (ros_gz_bringup) CommandEnded: {'returncode': 0}
+[6.416582] (-) TimerEvent: {}
+[6.420274] (ros_gz_bringup) JobEnded: {'identifier': 'ros_gz_bringup', 'rc': 0}
+[6.420929] (-) EventReactorShutdown: {}

@@ -7,7 +7,7 @@ from launch.actions import DeclareLaunchArgument
 from launch.actions import IncludeLaunchDescription
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
 
 from launch_ros.actions import Node
 
@@ -18,11 +18,6 @@ def generate_launch_description():
     model_dir = 'turtlebot3'
     rviz_file = 'turtlebot3.rviz'
     x, y, z, R, P, Y = '-2.0', '-0.5', '0.0', '0.0', '0.0', '0.0'
-
-    # Load model SDF file
-    sdf_file  =  os.path.join(get_package_share_directory('ros_gz_description'), 'models', model_dir, 'model.sdf')
-    with open(sdf_file, 'r') as infp:
-        robot_description = infp.read()
 
     # Launch descriptions
 
@@ -42,12 +37,12 @@ def generate_launch_description():
 
     # Nodes
 
-    ros_gz_sim_spawn_robot_node = Node(
+    create_robot_node = Node(
         package='ros_gz_sim',
         executable='create',
         output='screen',
         arguments=[
-            '-name', 'waffle',
+            '-name', 'turtlebot3_waffle',
             '-file', os.path.join(get_package_share_directory('ros_gz_description'), 'models', model_dir, 'model.sdf'),
             '-x', x,   # X position
             '-y', y,   # Y position
@@ -65,12 +60,12 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'use_sim_time': True,
-            'robot_description': robot_description
+            'robot_description': Command(['xacro ', os.path.join(get_package_share_directory('ros_gz_description'), 'models', model_dir, 'model.sdf')])
         }]
     )
 
 
-    ros_gz_bridge_node = Node(
+    ros_gazebo_bridge_node = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
         name='ros_gz_bridge',
@@ -93,8 +88,8 @@ def generate_launch_description():
         ros_gz_sim_launch_description,
 
         # Nodes
-        ros_gz_sim_spawn_robot_node,
-        ros_gz_bridge_node,
+        create_robot_node,
+        ros_gazebo_bridge_node,
         robot_state_publisher_node,
         rviz_node
     ])

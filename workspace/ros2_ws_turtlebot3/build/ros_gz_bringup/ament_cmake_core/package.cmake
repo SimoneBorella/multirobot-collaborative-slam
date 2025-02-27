@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "ros_gz_bringup")
 set(ros_gz_bringup_VERSION "0.0.0")
-set(ros_gz_bringup_MAINTAINER "Michael Carroll <michael@openrobotics.org>")
+set(ros_gz_bringup_MAINTAINER "root <root@todo.todo>")
 set(ros_gz_bringup_BUILD_DEPENDS "ros_gz" "sdformat_urdf" "joint_state_publisher_gui" "ros_gz_description" "ros_gz_gazebo")
 set(ros_gz_bringup_BUILDTOOL_DEPENDS "ament_cmake")
 set(ros_gz_bringup_BUILD_EXPORT_DEPENDS "ros_gz" "sdformat_urdf" "joint_state_publisher_gui" "ros_gz_description" "ros_gz_gazebo")

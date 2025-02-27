@@ -1,0 +1,2 @@
+Invoking command in '/workspace/ros2_ws_turtlebot3/build/ros_gz_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_gazebo -DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo
+Invoked command in '/workspace/ros2_ws_turtlebot3/build/ros_gz_gazebo' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_gazebo -DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo
