@@ -47,6 +47,6 @@ def generate_launch_description():
 
         # Launch descriptions
         ros_gz_launch_description,
-        # slam_toolbox_bringup_launch_description
+        slam_toolbox_bringup_launch_description
     ])
 
