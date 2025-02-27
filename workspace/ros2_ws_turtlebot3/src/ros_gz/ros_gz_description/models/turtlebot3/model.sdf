@@ -2,6 +2,11 @@
 <sdf version='1.8' xmlns:xacro="http://ros.org/wiki/xacro">
   <model name="turtlebot3_waffle" canonical_link='base_link'>
 
+    <!-- Robot Footprint -->
+    <link name='base_footprint'>
+      <pose relative_to="base_joint"/>
+    </link>
+
     <!-- Robot Base -->
     <link name="base_link">
       <must_be_base_link>true</must_be_base_link>
@@ -39,12 +44,6 @@
           <izz>0.018379012970817749</izz>
         </inertia>
       </inertial>
-    </link>
-
-
-    <!-- Robot Footprint -->
-    <link name='base_footprint'>
-      <pose relative_to="base_joint"/>
     </link>
 
     <joint name='base_joint' type='fixed'>
@@ -170,7 +169,6 @@
     <!-- Caster back right -->
     <link name='caster_back_right_link'>
       <pose relative_to="caster_back_right_joint"/>
-      
       <collision name='collision'>
         <geometry>
           <sphere>
@@ -203,7 +201,7 @@
       </inertial>
     </link>
 
-    <joint name='caster_back_right_joint' type='ball'>
+    <joint name='caster_back_right_joint' type='fixed'>
       <parent>base_link</parent>
       <child>caster_back_right_link</child>
       <pose relative_to="base_link">-0.177 -0.064 -0.004 -1.57 0 0</pose>
@@ -245,7 +243,7 @@
       </inertial>
     </link>
 
-    <joint name='caster_back_left_joint' type='ball'>
+    <joint name='caster_back_left_joint' type='fixed'>
       <parent>base_link</parent>
       <child>caster_back_left_link</child>
       <pose relative_to="base_link">-0.177 0.064 -0.004 -1.57 0 0</pose>
@@ -264,11 +262,11 @@
     <!-- IMU -->
     <link name="imu_link">
       <pose relative_to="imu_joint"/>
-      <sensor name="imu_sensor" type="imu">
+      <sensor name="imu" type="imu">
         <always_on>true</always_on>
         <update_rate>200</update_rate>
         <visualize>true</visualize>
-        <topic>/turtlebot3_waffle/imu</topic>
+        <topic>imu</topic>
         <ignition_frame_id>imu_link</ignition_frame_id>
         <imu>
           <angular_velocity>
@@ -358,8 +356,8 @@
       </inertial>
       <sensor name="gpu_lidar" type="gpu_lidar">
         <pose>-0.064 0 0.121 0 0 0</pose>
-        <topic>/turtlebot3_waffle/scan</topic>
-        <ignition_frame_id>turtlebot3_waffle/lidar_link</ignition_frame_id>
+        <topic>scan</topic>
+        <ignition_frame_id>lidar_link</ignition_frame_id>
         <update_rate>5</update_rate>
         <ray>
           <scan>
@@ -392,8 +390,6 @@
       <pose relative_to="base_link">-0.064 0 0.121 0 0 0</pose>
     </joint>
 
-
-
     <!-- Camera -->
 
     <link name="camera_link">
@@ -413,8 +409,8 @@
         <always_on>true</always_on>
         <visualize>true</visualize>
         <update_rate>30</update_rate>
-        <topic>/turtlebot3_waffle/camera/image_raw</topic>
-        <camera_info_topic>/turtlebot3_waffle/camera/camera_info</camera_info_topic>
+        <camera_info_topic>/camera/rgb/camera_info</camera_info_topic>
+        <topic>/camera/rgb/image_raw</topic>
         <ignition_frame_id>camera_frame</ignition_frame_id>
         <camera name="intel_realsense_r200">
           <horizontal_fov>1.02974</horizontal_fov>
@@ -458,9 +454,10 @@
       filename="ignition-gazebo-odometry-publisher-system"
       name="ignition::gazebo::systems::OdometryPublisher">
       <odom_publish_frequency>50</odom_publish_frequency>
-      <odom_topic>/turtlebot3_waffle/odom</odom_topic>
-      <odom_frame>turtlebot3_waffle/odom</odom_frame>
-      <robot_base_frame>turtlebot3_waffle</robot_base_frame>
+      <odom_topic>odom</odom_topic>
+      <odom_frame>odom</odom_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+      <tf_topic>/odom/tf</tf_topic>
     </plugin>
 
     <!-- Differential drive -->
@@ -472,7 +469,6 @@
       <wheel_separation>0.287</wheel_separation>
       <wheel_radius>0.033</wheel_radius>
       <topic>cmd_vel</topic>
-      <child_frame_id>base_link</child_frame_id>
       <!-- <max_linear_acceleration>1</max_linear_acceleration>
       <min_linear_acceleration>-1</min_linear_acceleration>
       <max_angular_acceleration>2</max_angular_acceleration>
@@ -487,19 +483,8 @@
     <plugin
       filename="ignition-gazebo-joint-state-publisher-system"
       name="ignition::gazebo::systems::JointStatePublisher">
+      <topic>joint_states</topic>
     </plugin>
-
-
-    <!-- Pose publisher -->
-
-    <plugin
-        filename="ignition-gazebo-pose-publisher-system"
-        name="ignition::gazebo::systems::PosePublisher">
-        <publish_link_pose>true</publish_link_pose>
-        <use_pose_vector_msg>true</use_pose_vector_msg>
-        <static_publisher>true</static_publisher>
-        <static_update_frequency>1</static_update_frequency>
-      </plugin>
 
   </model>
 </sdf>
