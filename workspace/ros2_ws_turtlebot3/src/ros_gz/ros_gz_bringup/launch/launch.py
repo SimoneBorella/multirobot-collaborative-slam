@@ -7,17 +7,44 @@ from launch.actions import DeclareLaunchArgument
 from launch.actions import IncludeLaunchDescription
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution, PythonExpression
 
 from launch_ros.actions import Node
 
 
 def generate_launch_description():
 
-    world_file = 'turtlebot3_world.sdf'
-    model_dir = 'turtlebot3'
-    rviz_file = 'turtlebot3.rviz'
-    x, y, z, R, P, Y = '-2.0', '-0.5', '0.0', '0.0', '0.0', '0.0'
+    # Launch arguments
+
+    x_init_launch_arg = DeclareLaunchArgument(
+        'x_init',
+        default_value='0.0'
+    )
+    y_init_launch_arg = DeclareLaunchArgument(
+        'y_init',
+        default_value='0.0'
+    )
+    z_init_launch_arg = DeclareLaunchArgument(
+        'z_init',
+        default_value='0.0'
+    )
+    R_init_launch_arg = DeclareLaunchArgument(
+        'R_init',
+        default_value='0.0'
+    )
+    P_init_launch_arg = DeclareLaunchArgument(
+        'P_init',
+        default_value='0.0'
+    )
+    Y_init_launch_arg = DeclareLaunchArgument(
+        'Y_init',
+        default_value='0.0'
+    )
+
+    rviz_launch_arg = DeclareLaunchArgument(
+        'rviz',
+        default_value='True'
+    )
 
     # Launch descriptions
 
@@ -29,7 +56,7 @@ def generate_launch_description():
         ]),
         launch_arguments={
             'gz_args': PathJoinSubstitution([
-                get_package_share_directory('ros_gz_gazebo'), 'worlds', world_file
+                get_package_share_directory('ros_gz_gazebo'), 'worlds', 'turtlebot3_world.sdf'
             ])
         }.items(),
     )
@@ -43,13 +70,13 @@ def generate_launch_description():
         output='screen',
         arguments=[
             '-name', 'turtlebot3_waffle',
-            '-file', os.path.join(get_package_share_directory('ros_gz_description'), 'models', model_dir, 'model.sdf'),
-            '-x', x,   # X position
-            '-y', y,   # Y position
-            '-z', z,   # Z position
-            '-R', R,   # Roll (rotation around x-axis)
-            '-P', P,   # Pitch (rotation around y-axis)
-            '-Y', Y   # Yaw (rotation around z-axis, in radians)
+            '-file', os.path.join(get_package_share_directory('ros_gz_description'), 'models', 'turtlebot3', 'model.sdf'),
+            '-x', LaunchConfiguration('x_init'),
+            '-y', LaunchConfiguration('y_init'),
+            '-z', LaunchConfiguration('z_init'),
+            '-R', LaunchConfiguration('R_init'),
+            '-P', LaunchConfiguration('P_init'),
+            '-Y', LaunchConfiguration('Y_init')
         ],
     )
 
@@ -60,7 +87,7 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'use_sim_time': True,
-            'robot_description': Command(['xacro ', os.path.join(get_package_share_directory('ros_gz_description'), 'models', model_dir, 'model.sdf')])
+            'robot_description': Command(['xacro ', os.path.join(get_package_share_directory('ros_gz_description'), 'models', 'turtlebot3', 'model.sdf')])
         }]
     )
 
@@ -77,13 +104,29 @@ def generate_launch_description():
     )
 
     rviz_node = Node(
-       package='rviz2',
-       executable='rviz2',
-       arguments=['-d', os.path.join(get_package_share_directory('ros_gz_bringup'), 'config', rviz_file)]
+        package='rviz2',
+        executable='rviz2',
+        arguments=['-d', os.path.join(get_package_share_directory('ros_gz_bringup'), 'config', 'turtlebot3.rviz')],
+        condition=IfCondition(
+            PythonExpression(
+                [
+                    LaunchConfiguration('rviz'), " == True",
+                ]
+            )
+        )
     )
 
 
     return LaunchDescription([
+        # Launch arguments
+        x_init_launch_arg,
+        y_init_launch_arg,
+        z_init_launch_arg,
+        R_init_launch_arg,
+        P_init_launch_arg,
+        Y_init_launch_arg,
+        rviz_launch_arg,
+
         # Launch descriptions
         ros_gz_sim_launch_description,
 

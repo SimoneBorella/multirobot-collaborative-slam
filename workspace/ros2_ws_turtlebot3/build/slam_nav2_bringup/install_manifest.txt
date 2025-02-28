@@ -1,7 +1,8 @@
 /workspace/ros2_ws_turtlebot3/install/slam_nav2_bringup/share/slam_nav2_bringup/launch/launch.py
+/workspace/ros2_ws_turtlebot3/install/slam_nav2_bringup/share/slam_nav2_bringup/config/nav2.rviz
 /workspace/ros2_ws_turtlebot3/install/slam_nav2_bringup/share/slam_nav2_bringup/config/mapper_params_online_async.yaml
-/workspace/ros2_ws_turtlebot3/install/slam_nav2_bringup/share/slam_nav2_bringup/map/map.yaml
-/workspace/ros2_ws_turtlebot3/install/slam_nav2_bringup/share/slam_nav2_bringup/map/map.pgm
+/workspace/ros2_ws_turtlebot3/install/slam_nav2_bringup/share/slam_nav2_bringup/maps/map.yaml
+/workspace/ros2_ws_turtlebot3/install/slam_nav2_bringup/share/slam_nav2_bringup/maps/map.pgm
 /workspace/ros2_ws_turtlebot3/install/slam_nav2_bringup/share/slam_nav2_bringup/param/turtlebot3_waffle.yaml
 /workspace/ros2_ws_turtlebot3/install/slam_nav2_bringup/share/ament_index/resource_index/package_run_dependencies/slam_nav2_bringup
 /workspace/ros2_ws_turtlebot3/install/slam_nav2_bringup/share/ament_index/resource_index/parent_prefix_path/slam_nav2_bringup

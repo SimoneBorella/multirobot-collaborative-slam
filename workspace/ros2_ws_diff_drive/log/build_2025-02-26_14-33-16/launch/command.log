@@ -1,4 +1,0 @@
-Invoking command in '/workspace/ros2_ws_diff_drive/build/launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspace/ros2_ws_diff_drive/build/launch -- -j8 -l8
-Invoked command in '/workspace/ros2_ws_diff_drive/build/launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspace/ros2_ws_diff_drive/build/launch -- -j8 -l8
-Invoking command in '/workspace/ros2_ws_diff_drive/build/launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspace/ros2_ws_diff_drive/build/launch
-Invoked command in '/workspace/ros2_ws_diff_drive/build/launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspace/ros2_ws_diff_drive/build/launch

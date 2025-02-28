@@ -9,6 +9,11 @@ endif()
 find_package(ament_cmake REQUIRED)
 
 install(DIRECTORY
+        frontend
+        DESTINATION share/${PROJECT_NAME}/
+)
+
+install(DIRECTORY
         launch
         DESTINATION share/${PROJECT_NAME}/
 )

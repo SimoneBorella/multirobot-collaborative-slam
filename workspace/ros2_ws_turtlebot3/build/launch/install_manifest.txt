@@ -1,3 +1,4 @@
+/workspace/ros2_ws_turtlebot3/install/launch/share/launch//frontend/grammar.lark
 /workspace/ros2_ws_turtlebot3/install/launch/share/launch//launch/launch.py
 /workspace/ros2_ws_turtlebot3/install/launch/share/ament_index/resource_index/package_run_dependencies/launch
 /workspace/ros2_ws_turtlebot3/install/launch/share/ament_index/resource_index/parent_prefix_path/launch

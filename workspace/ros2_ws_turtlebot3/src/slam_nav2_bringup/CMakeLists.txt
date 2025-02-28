@@ -19,8 +19,8 @@ install(
 
 install(
   DIRECTORY
-    map/
-  DESTINATION share/${PROJECT_NAME}/map
+    maps/
+  DESTINATION share/${PROJECT_NAME}/maps
 )
 
 install(

@@ -51,7 +51,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/slam_nav2_bringup/map" TYPE DIRECTORY FILES "/workspace/ros2_ws_turtlebot3/src/slam_nav2_bringup/map/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/slam_nav2_bringup/maps" TYPE DIRECTORY FILES "/workspace/ros2_ws_turtlebot3/src/slam_nav2_bringup/maps/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

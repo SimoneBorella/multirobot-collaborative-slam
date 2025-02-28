@@ -1,1 +1,1 @@
-/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/opt/ros/humble
+/workspace/ros2_ws_turtlebot3/install/slam_nav2_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_bringup:/workspace/ros2_ws_turtlebot3/install/ros_gz_gazebo:/workspace/ros2_ws_turtlebot3/install/ros_gz_description:/workspace/ros2_ws_turtlebot3/install/launch:/opt/ros/humble
