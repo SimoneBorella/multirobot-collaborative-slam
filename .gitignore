@@ -1,4 +1,4 @@
-*.vscode
+.vscode
 workspace/ros2_ws*/build
 workspace/ros2_ws*/install
 workspace/ros2_ws*/log
