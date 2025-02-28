@@ -8,6 +8,17 @@ R_init=0.0
 P_init=0.0
 Y_init=0.0
 
+
+pose_cov_init="[\
+0.01,0.0,0.0,0.0,0.0,0.0,\
+0.0,0.01,0.0,0.0,0.0,0.0,\
+0.0,0.0,0.01,0.0,0.0,0.0,\
+0.0,0.0,0.0,0.0001,0.0,0.0,\
+0.0,0.0,0.0,0.0,0.0001,0.0,\
+0.0,0.0,0.0,0.0,0.0,0.0001\
+]"
+
+
 ros_gz_rviz=False
 nav2_bringup_rviz=True
 
@@ -19,6 +30,7 @@ ros2 launch launch launch.py \
     R_init:=$R_init \
     P_init:=$P_init \
     Y_init:=$Y_init \
+    pose_cov_init:=$pose_cov_init \
     \
     ros_gz_rviz:=$ros_gz_rviz \
     nav2_bringup_rviz:=$nav2_bringup_rviz

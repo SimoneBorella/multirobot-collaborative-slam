@@ -67,8 +67,8 @@ RUN echo "# Avoid graphic issues using DRI2 instead of DRI3 with Intel Iris" >> 
 # RUN echo "# Select GAZEBO_MODEL_PATH for Gazebo" >> /root/.bashrc \
 #     && echo "export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models" >> /root/.bashrc
 
-RUN echo "# Select GZ_SIM_RESOURCE_PATH for Ignition Gazebo" >> /root/.bashrc \
-    && echo "export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/" >> /root/.bashrc
+# RUN echo "# Select GZ_SIM_RESOURCE_PATH for Ignition Gazebo" >> /root/.bashrc \
+#     && echo "export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/" >> /root/.bashrc
     
 RUN echo "# Source ROS2 Humble environment" >> /root/.bashrc \
     && echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc

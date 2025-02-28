@@ -3,8 +3,7 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
-from launch.actions import IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, SetEnvironmentVariable
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution, PythonExpression
@@ -46,6 +45,17 @@ def generate_launch_description():
         default_value='True'
     )
 
+    log_level_launch_arg = DeclareLaunchArgument(
+        'log_level',
+        default_value='info',
+        choices=['debug', 'info', 'warn', 'error', 'fatal'],
+    )
+
+
+    # Environment variables
+
+    gz_resource_path_env = SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', os.path.join(get_package_share_directory('ros_gz_description'), 'models'))
+
     # Launch descriptions
 
     ros_gz_sim_launch_description = IncludeLaunchDescription(
@@ -57,8 +67,10 @@ def generate_launch_description():
         launch_arguments={
             'gz_args': PathJoinSubstitution([
                 get_package_share_directory('ros_gz_gazebo'), 'worlds', 'turtlebot3_world.sdf'
-            ])
-        }.items(),
+            ]),
+            'on_exit_shutdown': 'True',
+            'log_level': LaunchConfiguration('log_level'),
+        }.items()
     )
 
 
@@ -76,7 +88,8 @@ def generate_launch_description():
             '-z', LaunchConfiguration('z_init'),
             '-R', LaunchConfiguration('R_init'),
             '-P', LaunchConfiguration('P_init'),
-            '-Y', LaunchConfiguration('Y_init')
+            '-Y', LaunchConfiguration('Y_init'),
+            '--ros-args', '--log-level', LaunchConfiguration('log_level')
         ],
     )
 
@@ -88,7 +101,10 @@ def generate_launch_description():
         parameters=[{
             'use_sim_time': True,
             'robot_description': Command(['xacro ', os.path.join(get_package_share_directory('ros_gz_description'), 'models', 'turtlebot3', 'model.sdf')])
-        }]
+        }],
+        arguments=[
+            '--ros-args', '--log-level', LaunchConfiguration('log_level')
+        ]
     )
 
 
@@ -100,13 +116,18 @@ def generate_launch_description():
             'config_file': os.path.join(get_package_share_directory('ros_gz_bringup'), 'config', 'ros_gz_bridge.yaml'),
             'qos_overrides./tf_static.publisher.durability': 'transient_local',
         }],
-        output='screen'
+        arguments=[
+            '--ros-args', '--log-level', LaunchConfiguration('log_level')
+        ]
     )
 
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
-        arguments=['-d', os.path.join(get_package_share_directory('ros_gz_bringup'), 'config', 'turtlebot3.rviz')],
+        arguments=[
+            '-d', os.path.join(get_package_share_directory('ros_gz_bringup'), 'config', 'turtlebot3.rviz'),
+            '--ros-args', '--log-level', LaunchConfiguration('log_level')
+        ],
         condition=IfCondition(
             PythonExpression(
                 [
@@ -118,6 +139,9 @@ def generate_launch_description():
 
 
     return LaunchDescription([
+        # Environment variables
+        gz_resource_path_env,
+
         # Launch arguments
         x_init_launch_arg,
         y_init_launch_arg,
@@ -126,6 +150,7 @@ def generate_launch_description():
         P_init_launch_arg,
         Y_init_launch_arg,
         rviz_launch_arg,
+        log_level_launch_arg,
 
         # Launch descriptions
         ros_gz_sim_launch_description,

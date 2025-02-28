@@ -21,6 +21,12 @@ def generate_launch_description():
         default_value='True'
     )
 
+    log_level_launch_arg = DeclareLaunchArgument(
+        'log_level',
+        default_value='info',
+        choices=['debug', 'info', 'warn', 'error', 'fatal'],
+    )
+
     # Launch descriptions
 
     slam_toolbox_launch_description = IncludeLaunchDescription(
@@ -30,6 +36,7 @@ def generate_launch_description():
         launch_arguments={
             'use_sim_time': 'true',
             'slam_params_file': PathJoinSubstitution([get_package_share_directory('slam_nav2_bringup'), 'config', 'mapper_params_online_async.yaml']),
+            'log_level': LaunchConfiguration('log_level'),
         }.items(),
     )
 
@@ -39,16 +46,19 @@ def generate_launch_description():
         ]),
         launch_arguments={
             'use_sim_time': 'true',
-            # 'autostart': 'true',
             'map': os.path.join(get_package_share_directory('slam_nav2_bringup'), 'maps', 'map.yaml'),
             'params_file': os.path.join(get_package_share_directory('slam_nav2_bringup'), 'param', 'turtlebot3_waffle.yaml'),
+            'log_level': LaunchConfiguration('log_level'),
         }.items(),
     )
 
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
-        arguments=['-d', os.path.join(get_package_share_directory('slam_nav2_bringup'), 'config', 'nav2.rviz')],
+        arguments=[
+            '-d', os.path.join(get_package_share_directory('slam_nav2_bringup'), 'config', 'nav2.rviz'),
+            '--ros-args', '--log-level', LaunchConfiguration('log_level')
+        ],
         condition=IfCondition(
             PythonExpression(
                 [
@@ -62,6 +72,7 @@ def generate_launch_description():
     return LaunchDescription([
         # Launch arguments
         rviz_launch_arg,
+        log_level_launch_arg,
 
         # Launch descriptions
         slam_toolbox_launch_description,

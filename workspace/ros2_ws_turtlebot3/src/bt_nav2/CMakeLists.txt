@@ -18,7 +18,7 @@ find_package(tf2_geometry_msgs REQUIRED)
 
 
 add_executable(initial_pose_publisher src/initial_pose_publisher/initial_pose_publisher.cpp)
-ament_target_dependencies(initial_pose_publisher rclcpp nav2_msgs)
+ament_target_dependencies(initial_pose_publisher rclcpp nav2_msgs tf2 tf2_geometry_msgs)
 target_include_directories(initial_pose_publisher
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/bt_nav2/initial_pose_publisher>
@@ -26,26 +26,29 @@ target_include_directories(initial_pose_publisher
     ${rclcpp_INCLUDE_DIRS}
 )
 
-add_executable(navigation_behavior src/navigation_behavior/navigation_behavior.cpp)
-ament_target_dependencies(navigation_behavior rclcpp nav2_msgs)
-target_include_directories(navigation_behavior
+add_executable(navigation src/navigation/navigation.cpp src/navigation/navigation_bt.cpp)
+ament_target_dependencies(navigation rclcpp behaviortree_cpp_v3 yaml-cpp rclcpp_action nav2_msgs tf2 tf2_geometry_msgs)
+target_include_directories(navigation
   PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/bt_nav2/navigation_behavior>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/bt_nav2/navigation>
     $<INSTALL_INTERFACE:include>
     ${rclcpp_INCLUDE_DIRS}
 )
-
+target_link_libraries(
+  navigation ${YAML_CPP_LIBRARIES}
+)
 
 
 install(TARGETS
-initial_pose_publisher
-  navigation_behavior
+  initial_pose_publisher
+  navigation
   DESTINATION lib/${PROJECT_NAME})
 
 
 install(DIRECTORY
   launch
   bt_xml
+  config
   DESTINATION share/${PROJECT_NAME})
 
 ament_package()
