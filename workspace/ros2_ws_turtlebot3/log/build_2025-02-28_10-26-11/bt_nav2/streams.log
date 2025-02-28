@@ -1,0 +1,76 @@
+[0.014s] Invoking command in '/workspace/ros2_ws_turtlebot3/build/bt_nav2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /workspace/ros2_ws_turtlebot3/src/bt_nav2 -DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws_turtlebot3/install/bt_nav2
+[0.058s] -- The C compiler identification is GNU 11.4.0
+[0.113s] -- The CXX compiler identification is GNU 11.4.0
+[0.121s] -- Detecting C compiler ABI info
+[0.188s] -- Detecting C compiler ABI info - done
+[0.196s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.196s] -- Detecting C compile features
+[0.197s] -- Detecting C compile features - done
+[0.200s] -- Detecting CXX compiler ABI info
+[0.273s] -- Detecting CXX compiler ABI info - done
+[0.287s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.287s] -- Detecting CXX compile features
+[0.288s] -- Detecting CXX compile features - done
+[0.293s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.439s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.554s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.618s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.627s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.640s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.657s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.680s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.745s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.750s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.852s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.886s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.940s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.954s] -- Looking for pthread.h
+[1.022s] -- Looking for pthread.h - found
+[1.022s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.091s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.092s] -- Found Threads: TRUE  
+[1.161s] -- Found rclcpp_action: 16.0.10 (/opt/ros/humble/share/rclcpp_action/cmake)
+[1.208s] -- Found nav2_msgs: 1.1.18 (/opt/ros/humble/share/nav2_msgs/cmake)
+[1.284s] -- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+[1.300s] -- Found tf2_geometry_msgs: 0.25.7 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.322s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.324s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.324s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.465s] -- Configuring done
+[1.485s] -- Generating done
+[1.488s] -- Build files have been written to: /workspace/ros2_ws_turtlebot3/build/bt_nav2
+[1.499s] Invoked command in '/workspace/ros2_ws_turtlebot3/build/bt_nav2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /workspace/ros2_ws_turtlebot3/src/bt_nav2 -DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws_turtlebot3/install/bt_nav2
+[1.501s] Invoking command in '/workspace/ros2_ws_turtlebot3/build/bt_nav2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspace/ros2_ws_turtlebot3/build/bt_nav2 -- -j8 -l8
+[1.547s] [ 50%] [32mBuilding CXX object CMakeFiles/navigation_behavior.dir/src/navigation_behavior/navigation_behavior.cpp.o[0m
+[1.547s] [ 50%] [32mBuilding CXX object CMakeFiles/initial_pose_publisher.dir/src/initial_pose_publisher/initial_pose_publisher.cpp.o[0m
+[4.267s] [ 75%] [32m[1mLinking CXX executable navigation_behavior[0m
+[4.273s] [100%] [32m[1mLinking CXX executable initial_pose_publisher[0m
+[4.401s] [100%] Built target navigation_behavior
+[4.404s] [100%] Built target initial_pose_publisher
+[4.414s] Invoked command in '/workspace/ros2_ws_turtlebot3/build/bt_nav2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspace/ros2_ws_turtlebot3/build/bt_nav2 -- -j8 -l8
+[4.439s] Invoking command in '/workspace/ros2_ws_turtlebot3/build/bt_nav2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspace/ros2_ws_turtlebot3/build/bt_nav2
+[4.446s] -- Install configuration: ""
+[4.446s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/lib/bt_nav2/initial_pose_publisher
+[4.446s] -- Set runtime path of "/workspace/ros2_ws_turtlebot3/install/bt_nav2/lib/bt_nav2/initial_pose_publisher" to ""
+[4.446s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/lib/bt_nav2/navigation_behavior
+[4.447s] -- Set runtime path of "/workspace/ros2_ws_turtlebot3/install/bt_nav2/lib/bt_nav2/navigation_behavior" to ""
+[4.447s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/launch
+[4.447s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/launch/launch.py
+[4.447s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/bt_xml
+[4.447s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/bt_xml/tree.xml
+[4.447s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/ament_index/resource_index/package_run_dependencies/bt_nav2
+[4.448s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/ament_index/resource_index/parent_prefix_path/bt_nav2
+[4.448s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/environment/ament_prefix_path.sh
+[4.448s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/environment/ament_prefix_path.dsv
+[4.448s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/environment/path.sh
+[4.448s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/environment/path.dsv
+[4.449s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/local_setup.bash
+[4.449s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/local_setup.sh
+[4.449s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/local_setup.zsh
+[4.449s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/local_setup.dsv
+[4.449s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/package.dsv
+[4.449s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/ament_index/resource_index/packages/bt_nav2
+[4.450s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/cmake/bt_nav2Config.cmake
+[4.450s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/cmake/bt_nav2Config-version.cmake
+[4.450s] -- Installing: /workspace/ros2_ws_turtlebot3/install/bt_nav2/share/bt_nav2/package.xml
+[4.452s] Invoked command in '/workspace/ros2_ws_turtlebot3/build/bt_nav2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspace/ros2_ws_turtlebot3/build/bt_nav2

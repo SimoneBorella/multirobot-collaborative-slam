@@ -1,0 +1,28 @@
+[0.011s] Invoking command in '/workspace/ros2_ws_turtlebot3/build/launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspace/ros2_ws_turtlebot3/build/launch -- -j8 -l8
+[0.025s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.154s] -- Configuring done
+[0.156s] -- Generating done
+[0.156s] -- Build files have been written to: /workspace/ros2_ws_turtlebot3/build/launch
+[0.172s] Invoked command in '/workspace/ros2_ws_turtlebot3/build/launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspace/ros2_ws_turtlebot3/build/launch -- -j8 -l8
+[0.184s] Invoking command in '/workspace/ros2_ws_turtlebot3/build/launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspace/ros2_ws_turtlebot3/build/launch
+[0.189s] -- Install configuration: "Release"
+[0.189s] -- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch//frontend
+[0.189s] -- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch//frontend/grammar.lark
+[0.190s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/launch//launch
+[0.190s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/launch//launch/launch.py
+[0.190s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/ament_index/resource_index/package_run_dependencies/launch
+[0.190s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/ament_index/resource_index/parent_prefix_path/launch
+[0.190s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/environment/ament_prefix_path.sh
+[0.191s] -- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/environment/ament_prefix_path.dsv
+[0.191s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/environment/path.sh
+[0.191s] -- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/environment/path.dsv
+[0.191s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/local_setup.bash
+[0.191s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/local_setup.sh
+[0.191s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/local_setup.zsh
+[0.191s] -- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/local_setup.dsv
+[0.191s] -- Installing: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/package.dsv
+[0.191s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/ament_index/resource_index/packages/launch
+[0.191s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/cmake/launchConfig.cmake
+[0.191s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/cmake/launchConfig-version.cmake
+[0.191s] -- Up-to-date: /workspace/ros2_ws_turtlebot3/install/launch/share/launch/package.xml
+[0.198s] Invoked command in '/workspace/ros2_ws_turtlebot3/build/launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspace/ros2_ws_turtlebot3/build/launch

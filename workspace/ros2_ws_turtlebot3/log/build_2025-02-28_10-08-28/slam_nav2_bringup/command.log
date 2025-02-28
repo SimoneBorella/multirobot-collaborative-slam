@@ -1,0 +1,2 @@
+Invoking command in '/workspace/ros2_ws/build/slam_nav2_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspace/ros2_ws/build/slam_nav2_bringup -- -j8 -l8
+Invoked command in '/workspace/ros2_ws/build/slam_nav2_bringup' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspace/ros2_ws/build/slam_nav2_bringup -- -j8 -l8
