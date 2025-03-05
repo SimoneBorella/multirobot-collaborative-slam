@@ -54,9 +54,15 @@ def generate_launch_description():
         default_value='True'
     )
 
-    nav2_bringup_rviz_launch_arg = DeclareLaunchArgument(
-        'nav2_bringup_rviz',
+    nav2_rviz_launch_arg = DeclareLaunchArgument(
+        'nav2_rviz',
         default_value='True'
+    )
+
+    log_level_launch_arg = DeclareLaunchArgument(
+        'log_level',
+        default_value='info',
+        choices=['debug', 'info', 'warn', 'error', 'fatal']
     )
 
 
@@ -79,35 +85,29 @@ def generate_launch_description():
             'P_init': LaunchConfiguration('P_init'),
             'Y_init': LaunchConfiguration('Y_init'),
             'rviz': LaunchConfiguration('ros_gz_rviz'),
-            'log_level': 'error',
+            'log_level': LaunchConfiguration('log_level'),
         }.items()
     )
 
-    nav2_bringup_launch_description = IncludeLaunchDescription(
+    nav2_launch_description = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
-            os.path.join(get_package_share_directory('slam_nav2_bringup'), 'launch', 'launch.py')
+            os.path.join(get_package_share_directory('nav2_launch'), 'launch', 'launch.py')
         ]),
         launch_arguments={
-            'rviz': LaunchConfiguration('nav2_bringup_rviz'),
-            'log_level': 'error',
+            'rviz': LaunchConfiguration('nav2_rviz'),
+            'log_level': LaunchConfiguration('log_level'),
         }.items(),
     )
 
-    # bt_nav2_launch_description = IncludeLaunchDescription(
-    #     PythonLaunchDescriptionSource([
-    #         os.path.join(get_package_share_directory('bt_nav2'), 'launch', 'launch.py')
-    #     ]),
-    #     launch_arguments={
-    #         'x_init': LaunchConfiguration('x_init'),
-    #         'y_init': LaunchConfiguration('y_init'),
-    #         'z_init': LaunchConfiguration('z_init'),
-    #         'R_init': LaunchConfiguration('R_init'),
-    #         'P_init': LaunchConfiguration('P_init'),
-    #         'Y_init': LaunchConfiguration('Y_init'),
-    #         'pose_cov_init': LaunchConfiguration('pose_cov_init'),
-    #         'log_level': 'info',
-    #     }.items(),
-    # )
+    slam_toolbox_launch_description = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(get_package_share_directory('slam_toolbox_launch'), 'launch', 'launch.py')
+        ]),
+        launch_arguments={
+            'log_level': LaunchConfiguration('log_level'),
+        }.items(),
+    )
+
     
 
     return LaunchDescription([
@@ -120,11 +120,12 @@ def generate_launch_description():
         Y_init_launch_arg,
         pose_cov_init_launch_arg,
         ros_gz_rviz_launch_arg,
-        nav2_bringup_rviz_launch_arg,
+        nav2_rviz_launch_arg,
+        log_level_launch_arg,
 
         # Launch descriptions
         ros_gz_launch_description,
-        nav2_bringup_launch_description,
-        # bt_nav2_launch_description
+        nav2_launch_description,
+        slam_toolbox_launch_description,
     ])
 

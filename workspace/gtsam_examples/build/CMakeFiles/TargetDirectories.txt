@@ -1,4 +1,0 @@
-/gtsam_examples/build/CMakeFiles/slam_2d.dir
-/gtsam_examples/build/CMakeFiles/slam_3d.dir
-/gtsam_examples/build/CMakeFiles/edit_cache.dir
-/gtsam_examples/build/CMakeFiles/rebuild_cache.dir

@@ -29,7 +29,6 @@ RUN apt -y update \
 RUN apt -y update \
     && apt install -y ros-humble-navigation2 ros-humble-nav2-bringup \
     && apt install -y ros-humble-ros-ign-bridge
-    # && apt install -y ros-humble-rmw-cyclonedds-cpp
 
 # Cpp tools and libraries
 RUN apt -y update \
@@ -48,6 +47,13 @@ RUN mkdir build \
     && make install \
     && ldconfig
 
+# WORKDIR /dep/BehaviorTree.CPP
+# RUN mkdir build \
+#     && cd build \
+#     && cmake .. \
+#     && make install \
+#     && ldconfig
+
 COPY workspace /workspace
 
 # Configuration .bashrc
@@ -58,18 +64,6 @@ RUN echo "# Set default XDG_RUNTIME_DIR" >> /root/.bashrc \
 RUN echo "# Avoid graphic issues using DRI2 instead of DRI3 with Intel Iris" >> /root/.bashrc \
     && echo "export LIBGL_DRI3_DISABLE=1" >> /root/.bashrc
 
-# RUN echo "# Select Cyclone DDS instead of Fast DDS ROS2 middleware" >> /root/.bashrc \
-#     && echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> /root/.bashrc
-
-# RUN echo "# Select Nav2 Turtlebot3 waffle model" >> /root/.bashrc \
-#     && echo "export TURTLEBOT3_MODEL=waffle" >> /root/.bashrc
-
-# RUN echo "# Select GAZEBO_MODEL_PATH for Gazebo" >> /root/.bashrc \
-#     && echo "export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models" >> /root/.bashrc
-
-# RUN echo "# Select GZ_SIM_RESOURCE_PATH for Ignition Gazebo" >> /root/.bashrc \
-#     && echo "export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:/workspace/ros2_ws_turtlebot3/src/ros_gz/ros_gz_description/models/" >> /root/.bashrc
-    
 RUN echo "# Source ROS2 Humble environment" >> /root/.bashrc \
     && echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
 

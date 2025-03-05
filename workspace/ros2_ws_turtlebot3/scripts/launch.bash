@@ -20,7 +20,8 @@ pose_cov_init="[\
 
 
 ros_gz_rviz=False
-nav2_bringup_rviz=True
+nav2_rviz=True
+log_level=error
 
 
 ros2 launch launch launch.py \
@@ -33,4 +34,5 @@ ros2 launch launch launch.py \
     pose_cov_init:=$pose_cov_init \
     \
     ros_gz_rviz:=$ros_gz_rviz \
-    nav2_bringup_rviz:=$nav2_bringup_rviz
+    nav2_rviz:=$nav2_rviz \
+    log_level:=$log_level
