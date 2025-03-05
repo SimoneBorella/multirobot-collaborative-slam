@@ -1,0 +1,8 @@
+delta_s: 0.5
+exp: 0
+landmark_uniform_err: 0.0
+n_steps: 10000
+plot: false
+pose_theta_uniform_err: 0.0
+pose_uniform_err: 0.0
+space_range: 100
