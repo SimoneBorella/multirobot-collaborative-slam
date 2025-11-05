@@ -41,7 +41,7 @@ WORKDIR /dep/gtsam-4.2.0-ros
 RUN mkdir build \
     && cd build \
     && cmake .. -DGTSAM_USE_SYSTEM_EIGEN=ON\
-    && make install \
+    && make install -j$(nproc) \
     && ldconfig
 
 # BehaviorTree.CPP library
@@ -50,7 +50,7 @@ RUN mkdir build \
 # RUN mkdir build \
 #     && cd build \
 #     && cmake .. \
-#     && make install \
+#     && make install -j$(nproc) \
 #     && ldconfig
 
 
@@ -61,7 +61,7 @@ RUN ./scripts/install_prerequisites.sh recommended \
     && mkdir build \
     && cd build \
     && cmake .. \
-    && make install \
+    && make install -j$(nproc) \
     && ldconfig
 
 
@@ -90,7 +90,7 @@ RUN mkdir build \
       -D INSTALL_PYTHON_EXAMPLES=OFF \
       -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
       -D BUILD_EXAMPLES=OFF .. \
-    && make install \
+    && make install -j$(nproc) \
     && ldconfig
     
 
@@ -122,7 +122,7 @@ WORKDIR /dep/flann
 RUN mkdir build \
     && cd build \
     && cmake .. \
-    && make install \
+    && make install -j$(nproc) \
     && ldconfig
 
 
